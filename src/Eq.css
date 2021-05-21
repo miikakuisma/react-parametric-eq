@@ -1,0 +1,72 @@
+.react-parametric-eq {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.react-parametric-eq .bands-container {
+  transform: rotate(-90deg);
+}
+
+.react-parametric-eq .bands {
+  width: 150px;
+  height: 270px;
+  border-radius: 10px;
+  background: #111;
+  padding-top: 15px;
+}
+
+.react-parametric-eq .bands .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+}
+
+.react-parametric-eq .bands .slider label {
+  transform: rotate(90deg);
+  color: #cccccc;
+  height: 20px;
+  width: 20px;
+  font-size: 10px;
+}
+
+.react-parametric-eq .bands input[type="range"] {
+  cursor: ns-resize;
+  width: 100px;
+  background: transparent;
+}
+
+.react-parametric-eq .bands input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: #ccc;
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 10px;
+}
+
+.react-parametric-eq .bands input[type="range"]::-moz-range-track {
+  -webkit-appearance: none;
+  background: #ccc;
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 10px;
+}
+
+.react-parametric-eq .bands input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #111;
+  border-radius: 50%;
+  margin-top: -3px;
+  height: 16px;
+  width: 16px;
+}
+
+.react-parametric-eq .bands input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: #111;
+  border-radius: 10px;
+  margin-top: -5px;
+  height: 20px;
+  width: 20px;
+}
