@@ -6,21 +6,35 @@ React Parametric EQ is 9-band parametric equalizer built on Web Audio API
 
 `npm install react-parametric-eq`
 
+or
+
+`yarn add react-parametric-eq`
+
 ## Usage
+
+Import the package..
 
 ```
 import ParametricEq from "react-parametric-eq"
+```
 
+then add it..
+
+```
 <ParametricEq
-	audioBuffer={audioBuffer} // required for rendering only
+	audioBuffer={audioBuffer}
 	onReady={() => {
-		// Everything has been initialized now
+		// EQ is ready now
+		// This is where you can connect audio nodes
 	}}
 	onChange={(band) => {
+		// This gets triggered as sliders are updated
 		console.log(band)
 	}}
-	onRender={(rendered) => {
-		// do something with rendered buffer
+	onRender={(renderedBuffer) => {
+		// When eQrender() method is called the current EQ settings
+		// are applied onto the given audioBuffer, after which this
+		// onRender is called, returns with updated audioBuffer.
 	}}
 	className='custom-css-selector'
 	style={{ width: '100%' }}
@@ -30,32 +44,17 @@ import ParametricEq from "react-parametric-eq"
 ## Props
 
 ```
-eQbands, eQreset, eQrender, eQexport
+eQbands
 ```
 
 ## Methods
 
 ```
-window.ParametricEq.reset()
-
-window.ParametricEq.render()
-
+eQreset()
+eQrender()
+eQexport()
 ```
 
-## Updating this package
+## Live demo
 
-You need to have NPM user account and be a member of sumoapps organization.
-
-After you've updated the code, you can test the package by installing it from local directory.
-For example:  `npm install ../sumo-filedrop` would add unpublished package.
-
-When you're certain that the package will work correctly, it's time to update it to npm.
-
-1. Run `npm build` 
-2. Commit and push the changes to git repo
-3. You need to be logged in to npm: `npm login`
-4. Increment version number [read more here](https://docs.npmjs.com/cli/version)
-5. run `npm publish`
-
-This package template was taken from here:
-
+Check out this CodeSandbox example
