@@ -4,7 +4,7 @@ React Parametric EQ is 9-band parametric equalizer built on Web Audio API
 
 ## Live demo
 
-[Check out this CodeSandbox example](https://codesandbox.io/p/devbox/react-parametric-eq-demo-tyr9tx)
+[Check out this CodeSandbox example]([https://codesandbox.io/p/devbox/react-parametric-eq-demo-tyr9tx](https://tyr9tx-5173.csb.app/))
 
 ## Install
 
